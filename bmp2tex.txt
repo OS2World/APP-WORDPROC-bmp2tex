@@ -1,0 +1,71 @@
+
+                           BMP2TEX
+
+               a converter from BitMAp to LaTeX
+
+
+0. Copyright notice
+ *  Copyright (c) 1994 Maurizio Giunti - All rights reserved  *
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ 3. All advertising materials mentioning features or use of this software
+    must display the following acknowledgement:
+    "This product includes software developed by Maurizio Giunti"
+
+THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT(INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+1. What is BMP2TEX
+BMP2TEX is a small utility to convert a bitmap of any dimension but with a
+single bit plane (2 colors) to a LaTeX readable file.
+
+2. Syntax:
+  BMP2TEX <bitmap> <out>
+
+Where <bitmap> is the name of the bitmap file and <out> is the name of the
+LaTeX file to create.
+
+3. Bitmap formats
+At this moment BMP2TEX can only read bitmap files in Windows3 or OS/2 2.xx
+format with a single bit plane, not compressed.
+That means you must convert other type of images to this format before trying
+to convert them in LaTeX format, using the right utility (something like
+PMJPEG for OS/2 o PaintShop for Windows).
+
+4. How to use a LaTeX image file
+You can import any image created with BMP2TEX, inserting the following
+statement in your .TEX file:
+
+        {\unitlength=1pt \input{ <pic> }}
+
+where instead of <pic> you must insert the name of the picture file.
+To resize the image you have to change the \unitlength definition, for example
+if you need a bigger image try to use 2pt, or if you need a smaller image
+try 0.5pt.
+
+
+5 The author
+For any problem or question, please contact me:
+
+        Maurizio Giunti
+        Via Foggini, 24
+        I-50142 Firenze
+
+        Fidonet: 2:332/102.3
+        Internet: giunti@stat.ds.unifi.it
+
+
